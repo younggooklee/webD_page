@@ -1,9 +1,9 @@
 /* setting */
-*{ margin:0; padding:0; list-style: none; text-decoration: none; box-sizing: border-box; color:inherit; scroll-behavior: smooth;}
+*{ margin:0; padding:0; list-style: none; text-decoration: none; box-sizing: border-box; color:inherit; scroll-behavior: smooth; -ms-overflow-style:none; font-family: "맑은 고딕";}
 table{ border-collapse: collapse; }
 button{ border:0; background: transparent; }
 .pointer{ cursor: pointer; }
-.w1200{ width: 1220px; height: 100%; margin:0 auto; }
+.w1220{ width: 1220px; height: 100%; margin:0 auto; }
 .wrap{ width: 1600px; margin:0 auto; }
 .btn{ padding:5px 15px;  border-radius: 10px; background: #4cb5e8; color:#fff; cursor: pointer; transition:  transform 0.5s;}
 .btn:hover{ transform: scale(1.1); }
@@ -11,26 +11,26 @@ button{ border:0; background: transparent; }
 /* header */
 header{  height: 10vh; background: #98d4f7; display: flex; justify-content: center; align-items: center; color:#fff;}
 /* main */
-main{  height: 400px;  }
-main .w1200{ padding: 50px 100px; border-bottom:1px solid lightgray; }
-main .w1200 .title{ line-height: 110px; text-align: center; color:#333;}
-main .w1200 .txt{ line-height: 30px;}
-main .w1200 li{  color:#666; font-size: 17px;}
-main .w1200 .txt .stitle{ color:#333; }
-main .w1200 .btn{ padding:2px 15px; }
-main .w1200 .txt-align{ text-align: justify;}
+main{  height: auto;  }
+main .w1220{ padding: 50px 100px; border-bottom:1px solid lightgray; }
+main .w1220 .txt{ line-height: 30px;}
+main .w1220 li{  color:#666; font-size: 17px;}
+main .w1220 .txt .stitle{ color:#333; }
+main .w1220 .btn{ padding:2px 15px; }
+main .w1220 .txt-align{ text-align: justify;}
 /* section */
-section {  height: auto; padding:85px 0; }
-.grid-list{ display: grid; grid-template-columns: repeat(4,180px); grid-gap: 60px;  justify-content: center; }
-.grid-list .item-list{ display: grid; grid-template-rows: 140px 50px; box-shadow: 1px 1px 5px lightgray; border-radius: 25px;}
-.grid-list .item-list .text-wrap{ line-height: 50px; text-align: center;}
-.grid-list .item-list .circle{ display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.5s;}
+section {  height: auto; padding:120px 0; }
+.grid-list{ display: flex;  justify-content: center; flex-wrap: wrap; }
+.grid-list .item-list{ width: 180px; margin:15px;  box-shadow: 1px 1px 5px lightgray; border-radius: 25px;}
+.grid-list .item-list .text-wrap{ line-height: 50px; text-align: center; height: 50px;}
+.grid-list .item-list .circle{ display: flex; justify-content: center; align-items: center; cursor: pointer; transition: background 0.5s; height: 140px;}
 .grid-list .item-list .circle .one{ width: 120px; height: 120px; border:1px solid lightgray; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 50px; transition: 0.5s;}
 .grid-list .item-list .circle .one:hover{ font-size: 65px;  }
 .grid-list .item-list .circle:hover .one{ background: #79c4e8; color:#fff;}
 .video-list{ height: auto; padding:20px 0 100px;}
 .video-list h3{ padding: 50px 0; font-size: 50px; color:#555; font-weight: normal;}
-.video-list iframe{ width: 1200px; height: 500px; }
+.video-list iframe{ width: 100%; height: 100%; }
+.video-list .i_video{ margin:0 auto;  border:1px solid lightgray; width: 1200px; height: 500px;}
 /* footer */
 footer{  height: 10vh; background:#4cb5e8; display: flex; justify-content: center; align-items: center; color:#fff; font-size: 14px;}
 /* nav */
@@ -47,3 +47,24 @@ nav a:hover{  background: #333;}
 #popup thead tr>td:nth-child(2){ width: 150px; }
 #popup thead tr>td:nth-child(3){ width: 320px; }
 #popup .btn{ width: fit-content; float: right; margin-top:15px;}
+
+
+@media (max-width: 1600px){
+	.wrap{ width: 100%; }
+}
+@media (max-width: 1400px){
+	.video-list{ width: 100%; }
+	.video-list h3{ text-align: center; }
+}
+@media ( max-width: 1220px){
+	.w1220{ width: 100%; }
+	.video-list .i_video{ width: 100%;  }
+	nav{ right: 0; top:0; display: flex;  transform: translateY(50%);}
+	nav a{ margin:0 10px; background: #fff;}
+}
+@media ( max-width: 800px){
+	header h2{ font-size: 4vw; }
+	main .w1220{ padding:5vw 5vw; }
+	#popup td{ font-size: 4vw; }
+	#popup caption{ font-size: 3.3vw; }
+}
